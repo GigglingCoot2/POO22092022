@@ -60,7 +60,7 @@ public class Automovil {
 
     @Override
     public String toString() {
-        return "Automovil{" + "marca=" + marca + ", subMarca=" + subMarca + ", modelo=" + modelo + ", color=" + color + '}';
+        return  "Automovil{" + "marca=" + marca + ", subMarca=" + subMarca + ", modelo=" + modelo + ", color=" + color + '}';
     }
     
     
