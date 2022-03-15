@@ -2,30 +2,30 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ico.fes.compsicion;
+package ico.fes.componentes;
 
 /**
  *
  * @author begax
  */
-public class Pedal {
+public class Procesador {
     private String marca;
-    private String material;
+    private float frecuenciaEnGhz;
 
-    public Pedal() {
+    public Procesador() {
     }
 
-    public Pedal(String marca, String material) {
+    public Procesador(String marca, float frecuenciaEnGhz) {
         this.marca = marca;
-        this.material = material;
+        this.frecuenciaEnGhz = frecuenciaEnGhz;
     }
 
-    public String getMaterial() {
-        return material;
+    public float getFrecuenciaEnGhz() {
+        return frecuenciaEnGhz;
     }
 
-    public void setMaterial(String material) {
-        this.material = material;
+    public void setFrecuenciaEnGhz(float frecuenciaEnGhz) {
+        this.frecuenciaEnGhz = frecuenciaEnGhz;
     }
 
     public String getMarca() {
@@ -38,7 +38,7 @@ public class Pedal {
 
     @Override
     public String toString() {
-        return "Pedal{" + "marca=" + marca + ", material=" + material + '}';
+        return "Procesador{" + "marca=" + marca + ", frecuenciaEnGhz=" + frecuenciaEnGhz + '}';
     }
     
     

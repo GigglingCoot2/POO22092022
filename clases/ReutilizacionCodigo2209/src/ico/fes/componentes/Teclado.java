@@ -2,30 +2,30 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ico.fes.compsicion;
+package ico.fes.componentes;
 
 /**
  *
  * @author begax
  */
-public class Pedal {
+public class Teclado {
     private String marca;
-    private String material;
+    private int numeroTeclas;
 
-    public Pedal() {
+    public Teclado() {
     }
 
-    public Pedal(String marca, String material) {
+    public Teclado(String marca, int numeroTeclas) {
         this.marca = marca;
-        this.material = material;
+        this.numeroTeclas = numeroTeclas;
     }
 
-    public String getMaterial() {
-        return material;
+    public int getNumeroTeclas() {
+        return numeroTeclas;
     }
 
-    public void setMaterial(String material) {
-        this.material = material;
+    public void setNumeroTeclas(int numeroTeclas) {
+        this.numeroTeclas = numeroTeclas;
     }
 
     public String getMarca() {
@@ -38,7 +38,7 @@ public class Pedal {
 
     @Override
     public String toString() {
-        return "Pedal{" + "marca=" + marca + ", material=" + material + '}';
+        return "Teclado{" + "marca=" + marca + ", numeroTeclas=" + numeroTeclas + '}';
     }
     
     
