@@ -46,7 +46,10 @@ public class TareaDLibro {
         libro2.setPaginas(417);
         System.out.println("Numero de paginas: " + libro2.getPaginas());
         
+        //tarea editada
         
+        System.out.println( libro1 );
+        System.out.println( libro2 );
     }
     
 }

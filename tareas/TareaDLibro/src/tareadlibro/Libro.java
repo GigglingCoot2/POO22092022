@@ -66,4 +66,11 @@ public class Libro {
         this.Apublicacion = Apublicacion;
     }
 
+    
+    //tarea editada
+    @Override
+    public String toString() {
+        return "Libro{" + "editorial=" + editorial + ", autor=" + autor + ", titulo=" + titulo + ", Apublicacion=" + Apublicacion + ", paginas=" + paginas + '}';
+    }
+
 }
