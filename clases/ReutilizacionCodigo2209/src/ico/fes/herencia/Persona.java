@@ -19,6 +19,10 @@ public class Persona {
         this.nombre = nombre;
         this.edad = edad;
     }
+    
+    public Persona(String var1, int var2, String var4){
+        System.out.println("Cualquier cosa");
+    }
 
     public int getEdad() {
         return edad;
@@ -42,6 +46,6 @@ public class Persona {
     }
    
    public void dormir(){
-       System.out.println(this.nombre + "estas durmiendo...");
+       System.out.println(this.nombre + "esta durmiendo...");
    }
 }
