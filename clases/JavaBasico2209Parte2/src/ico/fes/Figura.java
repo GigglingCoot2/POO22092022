@@ -9,5 +9,7 @@ package ico.fes;
  * @author begax
  */
 public abstract class Figura {
+
+    static float PI;
     public abstract float calcuarArea();
 }

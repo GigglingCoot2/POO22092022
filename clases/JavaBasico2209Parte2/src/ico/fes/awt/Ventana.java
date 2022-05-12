@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package ico.fes.awt;
+
 import java.awt.Button;
 import java.awt.FlowLayout;
 import java.awt.Frame;
@@ -17,10 +18,9 @@ import java.awt.event.MouseListener;
  *
  * @author begax
  */
-public class Ventana {
-    extends Frame implements MouseListener{
+public class Ventana extends Frame implements MouseListener{
     
-    private String titulo;
+     private String titulo;
     private Button boton1;
     
     private FlowLayout layout;
@@ -92,5 +92,6 @@ public class Ventana {
     public void mouseExited(MouseEvent me) {
         //System.out.println("El cursor salió del componente ");
     }
+
 
 }

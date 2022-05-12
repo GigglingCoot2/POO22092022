@@ -5,6 +5,9 @@
 package javabasico2209parte2;
 
 import ico.fes.Aritmetica;
+import ico.fes.Circulo;
+import ico.fes.Cuadrado;
+import ico.fes.herencia.EstudianteDeportista;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -83,7 +86,7 @@ public class JavaBasico2209Parte2 {
         
         System.out.println("--------------------------------------");
         
-        EstudianteDeportistaArtista eda = new EstudianteDeportistaArtista();
+        EstudianteDeportista eda = new EstudianteDeportista();
         eda.setNombre("Diana");
         eda.setCarrera("ICO");
         eda.setDisciplinaDeportiva("Futbol");
@@ -96,6 +99,7 @@ public class JavaBasico2209Parte2 {
         Una interfaz se implementa
         Una clase se hereda(no abstracta, abstracta).
          */
+        
     }
     
 }
