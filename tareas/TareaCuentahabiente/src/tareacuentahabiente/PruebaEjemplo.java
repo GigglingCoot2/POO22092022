@@ -24,10 +24,12 @@ public class PruebaEjemplo {
         lista[3] = new Cuentahabiente("RDR5031999", "Yelena Belova", 33, 500000);
         lista[4] = new Cuentahabiente("USAF568771", "Robyn Belova", 27, 35000);
         
-        for (int i = 0; i < lista.length; i++) {
-            Cuentahabiente Cuentahabiente = lista[i];
+        for (Cuentahabiente Cuentahabiente : lista) {
             System.out.println(Cuentahabiente.evaluarNivelCliente());
-        }
+            
+            }
+        
+        
     }
     
 }
