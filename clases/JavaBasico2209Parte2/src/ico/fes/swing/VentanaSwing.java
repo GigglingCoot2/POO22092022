@@ -5,21 +5,27 @@
 package ico.fes.swing;
 
 import ico.fes.Cuadrado;
+import ico.fes.herencia.Persona;
+import ico.fes.modelo.ModeloPersonaCombo;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.HeadlessException;
+import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.event.MouseInputAdapter;
 
 /**
  *
@@ -30,6 +36,9 @@ public class VentanaSwing extends JFrame{
     private JTextField cuadro;
     private JButton boton;
     private JLabel resultado;
+    private JComboBox<Persona> lista;
+    private ModeloPersonaCombo modelo;
+    private JTextArea texto;
     
     public VentanaSwing() throws HeadlessException{
         setTitle("Conversión de °C a °F");
@@ -42,9 +51,24 @@ public class VentanaSwing extends JFrame{
         boton.setOpaque(true);
         boton.setToolTipText("Clic para convertir en °F");
         resultado = new JLabel ("°F");
+        lista = new JComboBox();
+        texto = new JTextArea(5, 20);
+        /*lista.addItem("Ingenieria");
+        lista.addItem("Derecho");
+        lista.addItem("Periodismo");
+        lista.addItem("Arquitectura");*/
+        
+        modelo = new ModeloPersonaCombo();
+        modelo.consultarBaseDatos();
+        lista.setModel(modelo);
+        
+        
+        
         this.getContentPane().add(cuadro);
         this.getContentPane().add(boton);
         this.getContentPane().add(resultado);
+        this.getContentPane().add(lista);
+        this.getContentPane().add(texto);
         this.validate();
         this.setVisible(true);
         
@@ -53,6 +77,14 @@ public class VentanaSwing extends JFrame{
             public void windowClosing(WindowEvent e){
             System.exit(0);
             }
+        });
+        
+        this.lista.addItemListener(new ItemAdapter() {
+            @Override
+    public void itemStateChanged(ItemEvent ie) {
+        System.out.println("evento..." + ie.getItem());
+                texto.setText(ie.getItem()+"\n");
+    }
         });
         
         this.boton.addMouseListener(new MouseAdapter() {
